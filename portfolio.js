@@ -121,7 +121,7 @@ function draw() {
 function apply() {
   const english = settings.language === 'en';
   root.lang = english ? 'en' : 'pt-BR';
-  document.title = english ? 'Dassaévy Ono | Backend Developer' : 'Dassaévy Ono | Desenvolvedor Backend';
+  document.title = english ? 'Dassaévy Ono | Junior Backend Development' : 'Dassaévy Ono | Desenvolvimento Backend Júnior';
   for (const { element, pt, en } of translated) element.textContent = english ? en : pt;
   language.textContent = english ? 'PT' : 'EN';
   language.setAttribute('aria-label', english ? 'Mudar para Português' : 'Switch to English');
