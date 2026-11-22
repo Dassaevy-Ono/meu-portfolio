@@ -9,7 +9,8 @@ body {
 
 .apresentacao,
 .projetos,
-.contato {
+.contato,
+.sobre {
     max-width: 700px;
     margin: 24px auto;
     padding: 40px;
@@ -43,7 +44,8 @@ footer {
 @media (max-width: 600px) {
     .apresentacao,
     .projetos,
-    .contato {
+    .contato,
+    .sobre  {
         padding: 20px;
     }
 
