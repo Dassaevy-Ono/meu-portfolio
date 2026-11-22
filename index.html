@@ -3,92 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Dassaévy Ono</title>
+    <title>Dassaévy Ono | Desenvolvedor Backend</title>
+    <meta name="description" content="Portfólio de Dassaévy Ono, desenvolvedor com foco em backend, portais web e aplicações mobile.">
     <link rel="stylesheet" href="style.css">
+    <script src="portfolio.js" defer></script>
 </head>
 
 <body>
 
-<header class="apresentacao" id="inicio">
-
-    <h1>Dassaévy Ono</h1>
-    <p>Desenvolvimento de software com foco em backend.</p>
-    <nav class="menu" aria-label="Navegação principal">
-        <a class="link-projeto" href="#sobre">Sobre mim</a>
-        <a class="link-projeto" href="#projetos">Ver meus projetos</a>
-        <a class="link-projeto" href="#contato">Contato</a>
+<a class="skip" href="#conteudo" data-en="Skip to content">Pular para o conteúdo</a>
+<header class="barra">
+    <a class="marca" href="#inicio">Dassaévy Ono</a>
+    <nav aria-label="Seções">
+        <a href="#projetos" data-en="Projects">Projetos</a>
+        <a href="#sobre" data-en="About">Sobre</a>
+        <a href="#consulta" data-en="Query">Consulta</a>
+        <a href="#contato" data-en="Contact">Contato</a>
     </nav>
-
+    <div class="acoes">
+        <button id="idioma" type="button" aria-label="Change language">EN</button>
+        <button id="tema" type="button" data-en="Theme">Tema</button>
+        <button id="abrir" type="button" aria-haspopup="dialog" data-en="Settings">Configurações</button>
+    </div>
 </header>
+<div class="apresentacao" id="inicio">
+    <canvas id="pontos" aria-hidden="true"></canvas>
 
-<main>
-    <section class="sobre" id="sobre">
-        <h2>Sobre mim</h2>
-        <p>
-            Sou desenvolvedor de software com foco em backend. Tenho experiência em
-            desenvolvimento web, incluindo a criação de portais institucionais e
-            sistemas de gerenciamento de conteúdo. Estou sempre buscando aprender
-            novas tecnologias e aprimorar minhas habilidades para entregar soluções
-            eficientes e de qualidade.
-        </p>
-        <h3>Tecnologias que uso nos projetos</h3>
-        <ul>
-            <li>Node.js e Express no portal Notícias do Ramos</li>
-            <li>Supabase e Cloudflare Workes no Portal da Câmara</li>
-            <li>Git e GitHub no versionamento deste portfólio</li>
-            <li>React Native e Expo no desenvolvimento do NEXFIT, aplicativo que conecta alunos e treinadores</li>
-        </ul>
-    </section>
+    <div class="hero-grid">
+        <div class="hero-texto">
+            <p class="funcao" data-en="Backend Developer">Desenvolvedor Backend</p>
+            <h1>Dassaévy<br> Ono<span aria-hidden="true">.</span></h1>
+            <p class="resumo" data-en="I build web portals, publishing workflows, integrations and authentication for web and mobile applications.">Desenvolvo portais web, fluxos de publicação, integrações e autenticação para aplicações web e mobile.</p>
+            <nav class="menu" aria-label="Navegação principal">
+                <a class="link-projeto principal" href="#projetos" data-en="View projects">Ver projetos</a>
+                <a class="link-projeto" href="https://github.com/Dassaevy-Ono">GitHub</a>
+            </nav>
+        </div>
+        <div class="mapa" aria-hidden="true">
+            <div class="mapa-titulo">DASSAEVY ONO / STACK</div>
+            <div class="mapa-centro">backend</div>
+            <div class="mapa-nos">
+                <span>Node.js</span><span>Supabase</span><span>Cloudflare</span>
+            </div>
+        </div>
+    </div>
+</div>
 
+<main id="conteudo">
     <section class="projetos" id="projetos">
-        <h2>Projetos</h2>
+        <h2 data-en="Selected projects">Projetos selecionados</h2>
+        <div class="projetos-grid">
     <article class="projeto">    
-        <h3>Portal da Câmara de Boa Vista do Ramos</h3>
-        <p> Atuo no desenvolvimento do portal institucional e do Portal da Transparência
+        <p class="categoria" data-en="Institutional portal">Portal institucional</p>
+        <h3 data-en="Boa Vista do Ramos City Council Portal">Portal da Câmara de Boa Vista do Ramos</h3>
+        <p data-en="I work on the Boa Vista do Ramos City Council website and transparency portal. My work includes the news publishing dashboard, revenue and expense filters, and integration with the legislative process support system (SAPL)."> Atuo no desenvolvimento do portal institucional e do Portal da Transparência
             da Câmara Municipal de Boa Vista do Ramos. Meu trabalho inclui o painel
             administrativo para publicação de notícias, os filtros de consulta de
             receitas e despesas e a integração com o Sistema de Apoio ao Processo
             Legislativo (SAPL).
         </p>        
-        <a class="link-projeto" href="https://portal.camaraboavistadoramos.com.br/">Visitar o Portal da Câmara</a>
+        <p class="stack">Supabase · Cloudflare Workers · SAPL</p>
+        <a class="link-projeto" href="https://portal.camaraboavistadoramos.com.br/" data-en="Visit the City Council portal">Visitar o Portal da Câmara</a>
     </article>
         
     <article class="projeto">    
+        <p class="categoria" data-en="News portal">Portal de notícias</p>
         <h3>Notícias do Ramos</h3>
-        <p>
+        <p data-en="I develop a regional news portal with Node.js and Express. It includes an admin dashboard to edit posts and upload images.">
             Desenvolvo um portal de notícias regionais com Node.js e Express.
             O projeto inclui um painel administrativo para editar publicações e enviar imagens.
         </p>
-        <a class="link-projeto" href="https://github.com/Dassaevy-Ono/noticias-do-ramos">
-            Ver código no github
+        <p class="stack">Node.js · Express</p>
+        <a class="link-projeto" href="https://github.com/Dassaevy-Ono/noticias-do-ramos" data-en="View source on GitHub">
+            Ver código no GitHub
         </a>
     </article>  
 
     <article class="projeto">
+        <p class="categoria" data-en="Mobile app">Aplicativo mobile</p>
         <h3>NEXFIT</h3>
-        <p>
-            Aplicativo em desenvolvimento para conectar alunos e treinadores. Trabalhei na autentitcação, nos perfis de usuários e na vinculação entre alunos e treinadores por código.
+        <p data-en="An app in development that connects trainees and trainers. I worked on authentication, user profiles, and linking trainees to trainers with a code.">
+            Aplicativo em desenvolvimento para conectar alunos e treinadores. Trabalhei na autenticação, nos perfis de usuários e na vinculação entre alunos e treinadores por código.
         </p>
-        <a class="link-projeto" href="https://github.com/Dassaevy-Ono/NEXFIT">
+        <p class="stack">React Native · Expo</p>
+        <a class="link-projeto" href="https://github.com/Dassaevy-Ono/NEXFIT" data-en="View NEXFIT source">
             Ver código do NEXFIT
         </a>
     </article>
 
+        </div>
     </section>
 
+    <section class="sobre" id="sobre">
+        <h2 data-en="About me">Sobre mim</h2>
+        <p data-en="My work focuses on what happens behind the interface: how content is published, how users sign in, and how systems exchange data. I apply that work to a municipal transparency portal, a regional news site, and an app for trainees and trainers.">
+            Meu trabalho envolve as rotinas por trás da interface: como o conteúdo é publicado, como os usuários entram e como os sistemas trocam dados. Aplico esse trabalho em um portal municipal de transparência, em um site de notícias regionais e em um app para alunos e treinadores.
+        </p>
+        <h3 data-en="Tools I use in my projects">Tecnologias que uso nos projetos</h3>
+        <ul>
+            <li data-en="Node.js and Express for Notícias do Ramos">Node.js e Express no portal Notícias do Ramos</li>
+            <li data-en="Supabase and Cloudflare Workers for the City Council portal">Supabase e Cloudflare Workers no Portal da Câmara</li>
+            <li data-en="Git and GitHub for version control on this portfolio">Git e GitHub no versionamento deste portfólio</li>
+            <li data-en="React Native and Expo for NEXFIT, an app that connects trainees and trainers">React Native e Expo no desenvolvimento do NEXFIT, aplicativo que conecta alunos e treinadores</li>
+        </ul>
+    </section>
+
+    <section id="consulta">
+        <h2 data-en="Explore with SQL">Explore com SQL</h2>
+        <p data-en="Choose a query to explore my projects and the tools I use.">Escolha uma consulta para explorar meus projetos e as ferramentas que uso.</p>
+        <div class="acoes consultas" role="group" aria-label="SQL">
+            <button type="button" data-query="projetos" data-en="Projects" aria-pressed="false">Projetos</button>
+            <button type="button" data-query="tecnologias" data-en="Tools" aria-pressed="false">Tecnologias</button>
+            <button type="button" data-query="backend" data-en="Web projects" aria-pressed="false">Projetos web</button>
+        </div>
+        <pre><code id="sql">-- SQL</code></pre>
+        <div id="resultado" aria-live="polite"></div>
+    </section>
     <section class="contato" id="contato">
-        <h2>Contato</h2>
-        <p>Conheça meu perfil e outros projetos no GitHub.</p>
-        <a class="link-projeto" href="https://github.com/Dassaevy-Ono">
+        <h2 data-en="Contact">Contato</h2>
+        <p data-en="Find my profile and other projects on GitHub.">Conheça meu perfil e outros projetos no GitHub.</p>
+        <a class="link-projeto" id="perfil" href="https://github.com/Dassaevy-Ono" data-en="My GitHub profile">
             Meu perfil no GitHub
         </a>
+        <button id="copiar" type="button" hidden data-en="Copy GitHub link">Copiar link do GitHub</button>
+        <span id="status-copia" role="status"></span>
 
     </section>
 </main>
 <footer>
-    <p>Portfólio de Dassaévy Ono</p>
-    <a href="#inicio">Voltar ao inicio</a>
+    <p data-en="Dassaévy Ono’s portfolio">Portfólio de Dassaévy Ono</p>
+    <a href="#inicio" data-en="Back to top">Voltar ao início</a>
 </footer>
+<dialog id="preferencias" aria-labelledby="titulo-preferencias">
+    <form method="dialog" class="dialogo-topo">
+        <h2 id="titulo-preferencias" data-en="Settings">Configurações</h2>
+        <button data-en="Close">Fechar</button>
+    </form>
+    <label><span data-en="Language">Idioma</span>
+        <select name="language"><option value="pt">Português</option><option value="en">English</option></select>
+    </label>
+    <label><span data-en="Theme">Tema</span>
+        <select name="theme">
+            <option value="system" data-en="System">Sistema</option>
+            <option value="light" data-en="Light">Claro</option>
+            <option value="dark" data-en="Dark">Escuro</option>
+        </select>
+    </label>
+    <label><span data-en="Accent color">Cor de destaque</span>
+        <select name="accent">
+            <option value="teal" data-en="Teal">Verde-petróleo</option>
+            <option value="blue" data-en="Blue">Azul</option>
+            <option value="purple" data-en="Purple">Violeta</option>
+            <option value="orange" data-en="Orange">Laranja</option>
+            <option value="pink" data-en="Pink">Rosa</option>
+        </select>
+    </label>
+    <label><span data-en="Text size">Tamanho do texto</span>
+        <select name="size">
+            <option value="small" data-en="Small">Pequeno</option>
+            <option value="normal" data-en="Normal">Normal</option>
+            <option value="large" data-en="Large">Grande</option>
+        </select>
+    </label>
+    <label><span data-en="Interactive background">Fundo interativo</span><input name="background" type="checkbox" role="switch"></label>
+    <label><span data-en="Cursor spotlight">Luz que acompanha o cursor</span><input name="spotlight" type="checkbox" role="switch"></label>
+    <label><span data-en="Animations">Animações</span><input name="motion" type="checkbox" role="switch"></label>
+    <button id="restaurar" type="button" data-en="Restore defaults">Restaurar padrões</button>
+    <p data-en="Your preferences are saved in this browser.">Suas preferências ficam salvas neste navegador.</p>
+</dialog>
 </body>
 
 </html>
