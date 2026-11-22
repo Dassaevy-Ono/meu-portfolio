@@ -53,3 +53,9 @@ footer {
         gap: 12px;
     }
 }
+
+.projeto + .projeto {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #cbd5e1;
+}
